@@ -1,403 +1,180 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-
-*{
-  
+* {
   margin: 0;
   padding: 0;
-}
-
-body{
-  overflow:hidden;
-  zoom: 175%;
-  width: 100%;
-  height: 100%;
-  background-color: #797c7e4d;  
   box-sizing: border-box;
-  height: 100vh; /* Занимает всю высоту видимой области */
 }
 
-a {
-  color:  #A9A9A9;
-  text-decoration: none;
-  transition: all.6s ease;
-  -ms-transition: all.6s ease;
-  -o-transition: all.6s ease;
-  -moz-transition: all.6s ease;
-  -webkit-transition: all.6s ease;
-}
-a:hover {
-  color:  #2F4F4F;
-  text-decoration: none;
-  transition: all.6s ease;
-  -ms-transition: all.6s ease;
-  -o-transition: all.6s ease;
-  -moz-transition: all.6s ease;
-  -webkit-transition: all.6s ease;
+body {
+  overflow: auto; /* Разрешить прокрутку */
+  width: 100%;
+  height: auto; /* Установить высоту по содержимому */
+  background-color: #797c7e4d;  
+  font-family: 'Oswald', sans-serif; /* Добавлен шрифт для всего тела */
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  width: auto\9; /* ie8 */
-  
-}
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-header {
-  float: left;
+header {  
+  display: flex;  
+  align-items: center; /* Центрирует элементы по вертикали */
   background-image: linear-gradient(#4076b7, #39669c);  
-  width: 100%; 
-  padding: 0.2ch; 
-  
+  padding: 1.2ch;  
+  width: 100%;
+  height: auto;
 }
 
-header>div#logo>a>span {
-  font-size: 0.8em;
-  font-family: "Oswald", sans-serif;
-}
-header>div#logo>a>img {
-  width: 60px;
-  height: 40px;
-}
-header > div#home > a > .btn > img,
-header > div#gyms > a > .btn > img,
-header > div#nutrition > a > .btn > img {
-    width: 76px;
-    height: 56.8px;
+header > div {
+  align-items: center;
+  margin: 0 10px  
 }
 
-header > div#home > a > .btn > img:hover {
-  background-color:rgba(54, 62, 52, 0.38); /* Цвет фона при наведении */
+header #logo a {  
+  align-items: center;
+}
+
+header #logo a img {
+  width: 100%;
+  height: auto;
+
+}
+
+header .btn img {
+  width: 100%;
+  height: auto;  
+  align-items: center;
+  border-radius: 15%;
   transition: background-color 0.5s ease-in-out;
 }
-header > div#gyms > a > .btn > img:hover {
-  background-color:rgba(54, 62, 52, 0.38); /* Цвет фона при наведении */
-  transition: background-color 0.5s ease-in-out;
-}
-header > div#nutrition > a > .btn > img:hover {
-  background-color:rgba(54, 62, 52, 0.38); /* Цвет фона при наведении */
-  transition: background-color 0.5s ease-in-out;
-}
-header > div#home > a > .btn > img {
-  position: absolute;
-  top: 2px;
-  left: 110px;
-  border-radius: 15%;
-  transform: translateX(-50%);
-}
-header>div#gyms>a>.btn>img {
-  position: absolute;
-  top: 2px;
-  left: 191px;
-  border-radius: 15%;
-  transform: translateX(-50%);
-}
-header>div#nutrition>a>.btn>img {
-  position: absolute;
-  top: 2px;
-  left: 272px;
-  border-radius: 15%;
-  transform: translateX(-50%);
-}
-div#temp>img { 
-  
-  width: 500px;
-  height: 400px;
-  max-width: 500%;
-  max-height: 500%;
-  
-}
-#blockShoulder {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background: red;
-  opacity: 0%;  
-  top: 151.5px;
-  left: 80.8px;
+
+header .btn img:hover {
+  background-color: rgba(54, 62, 52, 0.38); /* Цвет фона при наведении */
 }
 
-#where_home {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
+#temp {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: auto; /* Высота по содержимому */
+  margin: 0 auto;
   
-  opacity: 50%;  
-  top: 104px;
-  left: 530px;
-  z-index: -1;
 }
-#where_home2 {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  
-  opacity: 50%;  
-  top: 164px;
-  left: 530px;
-  z-index: -1;
+#tempImage {
+  height: auto; /* Установить максимальную высоту равной высоте фрейма */
+  width: 80%;
 }
-#where_home3 {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  
-  opacity: 50%;  
-  top: 224px;
-  left: 530px;
-  z-index: -1;
-}
-#blockShoulder2 {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background: red;
-  opacity: 0%;  
-  top: 151.5px;
-  left: 327.8px;
-}
-#blockСhest{
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background: red;
-  opacity: 0%;  
-  top: 164px;
-  left: 102px;
-}
-#blockBiceps{
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background: red;
-  opacity: 0%;  
-  top: 184.5px;
-  left: 66.6px;
-}
-
-#blockCalves{
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background: red;
-  opacity: 0%;  
-  top: 376px;
-  left: 87.3px;
-}
-#blockCalves2{
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background: red;
-  opacity: 0%;  
-  top: 376px;
-  left: 335.7px;
-}
-#blockForearms{
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background: red;
-  opacity: 0%;  
-  top: 219px;
-  left: 44.4px;
-}
-#blockForearms2{
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background: red;
-  opacity: 0%;  
-  top: 219px;
-  left: 287.9px;
-}
-#blockGlutes{
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background: red;
-  opacity: 0%;  
-  top: 254px;
-  left: 352.4px;
-}
-#blockHamstrings{
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;  
-  background: red;
-  opacity: 0%;  
-  top: 294px;
-  left: 341px;
-}
-#blockLats{
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;  
-  background: red;
-  opacity: 0%;  
-  top: 181.7px;
-  left: 341px;
-}
-#blockLowerback{
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;  
-  background: red;
-  opacity: 0%;  
-  top: 216px;
-  left: 367.2px;
-}
-#blockObliques{
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background: red;
-  opacity: 0%;  
-  top: 196px;
-  left: 92.8px;
-}
-#blockQuads{
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background: red;
-  opacity: 0%;  
-  top: 297px;
-  left: 90.1px;
-}
-#blockTraps{
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background: red;
-  opacity: 0%;  
-  top: 138px;
-  left: 102px;
-}
-#blockTraps2{
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background: red;
-  opacity: 0%;  
-  top: 140px;
-  left: 367.5px;
-}
-#blockTriceps{
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;  
-  background: red;
-  opacity: 0%;  
-  top: 181.7px;
-  left: 312px;
-
-}
-#TrapsMiddleTraps{
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;  
-  background: red;
-  opacity: 0%;  
-  top: 176px;
-  left: 367.2px;
-}
-
-#abdominals{
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;  
-  background: red;
-  opacity: 0%;  
-  top: 234px;
-  left: 114px;
-}
-#frame{  
-  position: absolute;
-  top: 70px;
-  width: 600px;
-  height: 400px;
+#frame {
+  position: relative;
+  width: 80%;  
+  max-width: 1200px;
+  height: auto;
   background: rgba(76, 89, 73, 0.13);
-  border-radius: 10%; 
+  border-radius: 10%;
   border: 2px solid rgb(0, 0, 0);
-  margin-left: auto;
-    margin-right: auto;
-}
-#frame::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 100px; /* Отступ справа */
-  width: 5px; /* Ширина полоски */
-  height: 100%;
-  background: #000000b2; /* Цвет полоски */
-}
-
-div#Where1>img { 
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 100px;
-  left: 520px;
-  fill: aqua;
-}
-div#Where2>img { 
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 160px;
-  left: 520px;
-}
-div#Where3>img { 
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 220px;
-  left: 520px;
-}
-div.backgroundDiv {
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
   
 }
+.backgroundDiv {
+  overflow: auto; /* Добавлено для обеспечения прокрутки */
+}
+.where {
+  flex-direction: column;  
+  margin-top: 30%;
+  margin-left: 10%; /* Расстояние между блоками */
+}
 
-div.centerDiv {
+.centerDiv {
   background-color: #ffffff;
   padding: 20px;
-  width: 80%;
-  height: 1000px;
+  width: 80%;  
+  border-radius: 30px;
   max-width: 1200px;
-  margin: 70px auto 0 auto; /* Добавлен отступ сверху и центрирование по горизонтали */
+  margin: 70px auto; /* Добавлен отступ сверху и центрирование по горизонтали */
   box-sizing: border-box;
 }
-.articleHeader{
-  text-align: center
+
+.articleHeader {  
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  color: #333; /* Цвет текста */
+   /* Выравнивание по центру */
+  text-transform: uppercase; /* Преобразование текста в верхний регистр */  
+}
+
+.block {
+  position: absolute;
+  width: 2%;
+  height: 2%;
+  border-radius: 100%;
+  background: red;
+  opacity: 0%;  
+}
+#blockShoulder{
+  left: 11.3%;
+  top: 22.6%;
+}
+#blockShoulder2{
+  left: 53%;
+  top: 22.6%;
+}
+#blockСhest{
+  left: 15%;
+  top: 25.6%;
+}
+.where img {
+  width: 60%;
+  height: 60%;
+}
+
+.where-block {    
+  width: 4%;
+  height: 5.4%;
+  border-radius: 100%;
+  opacity: 50%;  
+  position: absolute; /* Устанавливаем позиционирование */
+  z-index: -1; /* Устанавливаем z-index, чтобы элемент находился за картинкой */
+}
+#where_home3{
+  top: 61.2%;
+}
+#where_home2{
+  top: 47.8%;
+}
+#where_home{
+  top: 34.4%;
+}
+#textLogo{
+  display: flex;
+  flex-direction: column;  
+}
+
+.gif-container {
+  display: flex;  
+  border-radius: 10px;
+  overflow: hidden;  
+  
+}
+
+.gif-container img {
+  margin-top: 2%;
+  margin-left: 3%;
+  width: 45%;
+  box-shadow: 0px 2px 14px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  display: block;
+}
+.description {  
+  margin-bottom: 40px;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; /* Цвет текста */  
+  margin: 20px 0; /* Внешние отступы сверху и снизу */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Тень текста */
+}
+#TUSURGYM{  
+  font-family: Arial, sans-serif;  
+  font-weight: bold;
+  color: #333; /* Цвет текста */    
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Тень текста */
 }

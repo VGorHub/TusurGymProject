@@ -3,12 +3,14 @@ import { Link } from "react-router-dom"
 export const Header = () => {
     return (
         <header>
-            <div id ="logo">
-            <Link to="/" title="На главную страницу">
-                <img src="/img/logo.svg" title="TUSUR GYM" alt="TUSUR GYM"/>
-                <br />
-                <span>TUSUR GYM</span>
-            </Link>
+            <div id="logo">
+                <Link to="/" title="На главную страницу">
+                    <div id="TextLogo">
+                        <img src="/img/logo.svg" title="TUSUR GYM" alt="TUSUR GYM"/>
+
+                        <p id="TUSURGYM" >TUSUR GYM</p>
+                    </div>
+                </Link>
             </div>
             <div id="home" className="btn-container">
                 <Link to="/" title="Домой">
