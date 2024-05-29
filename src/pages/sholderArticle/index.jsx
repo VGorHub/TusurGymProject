@@ -1,8 +1,8 @@
-import { PageLayout } from "../../components/pageLayout"
+
 
 export const SholderArticlePage = () => {
     return (
-        <PageLayout>  
+        
 
             <div className="backgroundDiv">
                 <div className="centerDiv">
@@ -10,6 +10,6 @@ export const SholderArticlePage = () => {
                 </div>
             </div>
             
-        </PageLayout>
+        
     )
 }
